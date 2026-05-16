@@ -78,5 +78,25 @@ router.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
     res.status(500).json({ message: 'Failed to fetch user.', error: err });
   }
 });
-
+router.get('/seed-now', async (req: Request, res: Response) => {
+  try {
+    const users = [
+      { name: 'Admin',       email: 'admin@lms.com',      password: 'Admin@123',      role: 'admin' },
+      { name: 'Sales',       email: 'sales@lms.com',      password: 'Sales@123',      role: 'sales' },
+      { name: 'Sanction',    email: 'sanction@lms.com',   password: 'Sanction@123',   role: 'sanction' },
+      { name: 'Disburse',    email: 'disburse@lms.com',   password: 'Disburse@123',   role: 'disbursement' },
+      { name: 'Collection',  email: 'collection@lms.com', password: 'Collection@123', role: 'collection' },
+      { name: 'Borrower',    email: 'borrower@lms.com',   password: 'Borrower@123',   role: 'borrower' },
+    ];
+    const results = [];
+    for (const u of users) {
+      const exists = await User.findOne({ email: u.email });
+      if (!exists) { await User.create(u); results.push(`Created: ${u.email}`); }
+      else { results.push(`Already exists: ${u.email}`); }
+    }
+    res.json({ success: true, results });
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
+});
 export default router;
