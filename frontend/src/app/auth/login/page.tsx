@@ -19,12 +19,12 @@ function getRedirectPath(role: string): string {
 }
 
 const DEMO_USERS = [
-  { role: 'Borrower',     email: 'borrower@lms.com',    password: 'Borrower@123',    Icon: UserCircle,  color: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100',         desc: 'Loan apply karta hai' },
-  { role: 'Admin',        email: 'admin@lms.com',        password: 'Admin@123',        Icon: ShieldCheck, color: 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100', desc: 'Sab kuch dekh sakta hai' },
-  { role: 'Sales',        email: 'sales@lms.com',        password: 'Sales@123',        Icon: Users,       color: 'bg-green-50 text-green-700 border-green-200 hover:bg-green-100',     desc: 'Leads track karta hai' },
-  { role: 'Sanction',     email: 'sanction@lms.com',     password: 'Sanction@123',     Icon: BadgeCheck,  color: 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100',         desc: 'Approve/Reject karta hai' },
-  { role: 'Disbursement', email: 'disburse@lms.com',     password: 'Disburse@123',     Icon: Banknote,    color: 'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-100', desc: 'Funds release karta hai' },
-  { role: 'Collection',   email: 'collection@lms.com',   password: 'Collection@123',   Icon: HandCoins,   color: 'bg-red-50 text-red-700 border-red-200 hover:bg-red-100',             desc: 'Payments record karta hai' },
+  { role: 'Borrower',     email: 'borrower@lms.com',    password: 'Borrower@123',    Icon: UserCircle,  color: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100',         desc: 'Apply for loans' },
+  { role: 'Admin',        email: 'admin@lms.com',        password: 'Admin@123',        Icon: ShieldCheck, color: 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100', desc: 'Full system access' },
+  { role: 'Sales',        email: 'sales@lms.com',        password: 'Sales@123',        Icon: Users,       color: 'bg-green-50 text-green-700 border-green-200 hover:bg-green-100',     desc: 'Track leads' },
+  { role: 'Sanction',     email: 'sanction@lms.com',     password: 'Sanction@123',     Icon: BadgeCheck,  color: 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100',         desc: 'Approve or reject loans' },
+  { role: 'Disbursement', email: 'disburse@lms.com',     password: 'Disburse@123',     Icon: Banknote,    color: 'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-100', desc: 'Release funds' },
+  { role: 'Collection',   email: 'collection@lms.com',   password: 'Collection@123',   Icon: HandCoins,   color: 'bg-red-50 text-red-700 border-red-200 hover:bg-red-100',             desc: 'Record payments' },
 ];
 
 export default function LoginPage() {
@@ -56,7 +56,7 @@ export default function LoginPage() {
   const fillCredentials = (e: string, p: string) => {
     setEmail(e);
     setPassword(p);
-    toast('Credentials fill ho gaye! Ab Sign In dabao ✅', { icon: '👆' });
+    toast('Credentials filled! Click Sign In to continue ✅', { icon: '👆' });
   };
 
   return (
@@ -103,7 +103,7 @@ export default function LoginPage() {
 
         <div className="card">
           <p className="text-sm font-semibold text-gray-700 mb-1">🧪 Demo Accounts</p>
-          <p className="text-xs text-gray-400 mb-3">Kisi bhi card pe click karo → credentials auto-fill → phir Sign In dabao</p>
+          <p className="text-xs text-gray-400 mb-3">Click any card below → credentials auto-fill → then click Sign In</p>
           <div className="grid grid-cols-2 gap-2">
             {DEMO_USERS.map(({ role, email: e, password: p, Icon, color, desc }) => (
               <button key={role} type="button" onClick={() => fillCredentials(e, p)}
