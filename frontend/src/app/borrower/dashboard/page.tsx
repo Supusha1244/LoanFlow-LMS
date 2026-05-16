@@ -18,7 +18,7 @@ export default function BorrowerDashboard() {
 
   useEffect(() => {
     if (!loading && !user) { router.push('/auth/login'); return; }
-    if (!loading && user?.role !== 'borrower') { router.push('/'); return; }
+    if (!loading && user?.role !== 'borrower') { router.push('/auth/login'); return; }
     if (!loading && user) {
       api.get('/loans/my-loans').then(r => setLoans(r.data.loans)).catch(console.error).finally(() => setFetching(false));
     }
