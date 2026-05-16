@@ -23,7 +23,7 @@ const DEMO_USERS = [
   { role: 'Admin',        email: 'admin@lms.com',        password: 'Admin@123',        Icon: ShieldCheck, color: 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100', desc: 'Full system access' },
   { role: 'Sales',        email: 'sales@lms.com',        password: 'Sales@123',        Icon: Users,       color: 'bg-green-50 text-green-700 border-green-200 hover:bg-green-100',     desc: 'Track leads' },
   { role: 'Sanction',     email: 'sanction@lms.com',     password: 'Sanction@123',     Icon: BadgeCheck,  color: 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100',         desc: 'Approve or reject loans' },
-  { role: 'Disbursement', email: 'disburse@lms.com',     password: 'Disburse@123',     Icon: Banknote,    color: 'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-100', desc: 'Release funds' },
+  { role: 'Disbursement', email: 'disbursement@lms.com',     password: 'Disbursement@123',     Icon: Banknote,    color: 'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-100', desc: 'Release funds' },
   { role: 'Collection',   email: 'collection@lms.com',   password: 'Collection@123',   Icon: HandCoins,   color: 'bg-red-50 text-red-700 border-red-200 hover:bg-red-100',             desc: 'Record payments' },
 ];
 
