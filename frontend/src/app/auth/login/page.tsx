@@ -19,7 +19,7 @@ function getRedirectPath(role: string): string {
 }
 
 const DEMO_USERS = [
-  { role: 'Borrower',     email: 'borrower@lms.com',    password: 'Borrower@123',    Icon: UserCircle,  color: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100',         desc: 'Apply for loans' },
+  { role: 'Borrower',     email: 'supusha@gmail.com',    password: '123456',    Icon: UserCircle,  color: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100',         desc: 'Apply for loans' },
   { role: 'Admin',        email: 'admin@lms.com',        password: 'Admin@123',        Icon: ShieldCheck, color: 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100', desc: 'Full system access' },
   { role: 'Sales',        email: 'sales@lms.com',        password: 'Sales@123',        Icon: Users,       color: 'bg-green-50 text-green-700 border-green-200 hover:bg-green-100',     desc: 'Track leads' },
   { role: 'Sanction',     email: 'sanction@lms.com',     password: 'Sanction@123',     Icon: BadgeCheck,  color: 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100',         desc: 'Approve or reject loans' },
